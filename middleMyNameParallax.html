@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Middle parallax scroll my name</title>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    .gen {
+      width: 100%;
+      height: 100vh;
+      perspective: 400px;
+      transform-style: preserve-3d;
+      overflow-y: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-of-type(1) {
+        background-color: red;
+      }
+
+      &:nth-of-type(2) {
+        background-color: green;
+      }
+
+      &:nth-of-type(3) {
+        background-color: yellow;
+      }
+
+      &:nth-of-type(4) {
+        background-color: blue;
+      }
+    }
+
+    .ttt {
+      position: relative;
+    }
+
+    .tty {
+      position: absolute;
+      transform: translateZ(200px) scale(0.5);
+    }
+
+    .tyt {
+      transform-style: preserve-3d;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gen">
+    <div class="container">This is my name</div>
+    <div class="container tyt">
+      <div class="ttt tty">NDIZIHIWE</div>
+      <div class="ttt">Gakiza</div>
+    </div>
+    <div class="container tyt">
+      <div class="ttt tty">Divin</div>
+      <div class="ttt">Gay</div>
+    </div>
+    <div class="container">End of my name</div>
+  </div>
+  <p title="World Human Organisation">WHO</p>
+</body>
+
+</html>

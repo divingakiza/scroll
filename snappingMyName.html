@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll my Name with snapping</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 50px;
+    }
+
+    body {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+    }
+
+    .sub-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
+      scroll-margin-left: 100px;
+
+      &:nth-of-type(1) {
+
+        background-color: rgb(20, 20, 20);
+        color: rgb(0, 80, 0);
+      }
+
+      &:nth-of-type(2) {
+        background-color: rgb(30, 30, 30);
+        color: rgb(4, 43, 134);
+      }
+
+      &:nth-of-type(3) {
+        background-color: rgb(40, 40, 40);
+        color: rgb(118, 3, 43);
+      }
+
+      &:nth-of-type(4) {
+        background-color: rgb(50, 50, 50);
+        color: rgb(0, 128, 126);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="sub-container">
+      <p>NDIZIHIWE</p>
+    </div>
+    <div class="sub-container">
+      <p>Gakiza</p>
+    </div>
+    <div class="sub-container">
+      <p>Divin</p>
+    </div>
+    <div class="sub-container">
+      <p>Gay</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll my name with parallax</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(164, 164, 164);
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      perspective: 400px;
+      overflow-x: hidden;
+    }
+
+    .sub-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .containerElement {
+      position: absolute;
+    }
+
+    .pushTop-element {
+      transform: translateZ(200px) scale(0.5);
+    }
+
+    .Bottom-element {
+      transform: translateZ(0px);
+      color: green;
+    }
+
+    .top {
+      height: 100vh;
+      font-size: 4em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(215, 215, 215);
+    }
+
+    .bottom {
+      background-color: rgb(55, 55, 55);
+    }
+
+    .one-screen {
+      background-color: rgb(165, 165, 165);
+    }
+
+    .two-screen {
+      background-color: rgb(115, 115, 115);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="top">My name</div>
+    <div class="sub-container one-screen">
+      <div class="containerElement pushTop-element">NDIZIHIWE</div>
+      <div class="containerElement Bottom-element">Gakiza</div>
+    </div>
+    <div class="sub-container two-screen">
+      <div class="containerElement pushTop-element">NDIZIHIWE</div>
+      <div class="containerElement Bottom-element">Gakiza</div>
+    </div>
+    <div>
+      <div class="top bottom">End</div>
+    </div>
+  </div>
+</body>
+
+</html>
